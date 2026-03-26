@@ -64,9 +64,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /* END OF CUSTOM CSS RESET */
 
+body {
+  background-image: url(./assets/images/dogs-and-people.jpg);
+  background-size: cover;
+}
+
+main {
+  display: flex;
+}
+
 #hero-sidebar {
   height: 100vh;
-  width: min(500px, 100vw);
+  width: min(800px, 100vw);
   position: relative;
 }
 
@@ -121,14 +130,6 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
-#dog-photo {
-  position: absolute;
-  z-index: -1;
-  bottom: 0;
-  height: auto;
-  width: 100%;
-}
-
 #photo-info a {
   color: inherit;
 }
@@ -144,7 +145,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #form-side {
-  width: 500px;
   height: 100vh;
+  width: 100%;
+  background-color: white;
 }
 
