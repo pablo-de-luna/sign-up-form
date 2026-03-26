@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* END OF CUSTOM CSS RESET */
 
-#logo-container {
+#logo-box {
   --logo-color: #d5e2db;
 
   background-color: #2a2a2a;
@@ -73,13 +73,21 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+#logo-container {
+  position: absolute;
+  width: 340px;
+  height: 320px;
+  right: 5vw;
+  bottom: 0;
+}
+
 #logo-container img {
   --image-size: 512px;
 
   height: calc(var(--image-size) - 360px);
   width: calc(var(--image-size) - 360px);
   position: absolute;
-  right: 202px;
+  right: 112px;
   bottom: 39px;
   filter: saturate(0.4);
 }
@@ -93,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--logo-color);
   position: absolute;
   font-size: 3rem;
-  right: 359px;
+  right: 269px;
   bottom: 42px;
 }
 
@@ -101,8 +109,10 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--logo-color);
   position: absolute;
   font-size: 4rem;
-  right: 90px;
-  bottom: -25px;
+  right: 0;
+  bottom:  -25px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #dog-photo {
