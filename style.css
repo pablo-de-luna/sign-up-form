@@ -41,8 +41,24 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-img {
-  height: 100vh;
-  width: auto;
+/* END OF CUSTOM CSS RESET */
+
+#logo-container {
+  background-color: #2a2a2a;
+  width: 600px;
+  height: 30vh;
+}
+
+#logo-container img {
+  height: 50%;
+}
+
+#dog-photo {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  height: auto;
+  width: 600px;
 }
 
