@@ -65,6 +65,8 @@ h1, h2, h3, h4, h5, h6 {
 /* END OF CUSTOM CSS RESET */
 
 #logo-container {
+  --logo-color: #d5e2db;
+
   background-color: #2a2a2a;
   width: min(600px, 100vw);
   height: 30vh;
@@ -74,8 +76,12 @@ h1, h2, h3, h4, h5, h6 {
 #logo-container img {
   --image-size: 512px;
 
-  height: calc(var(--image-size) - 300px);
-  width: calc(var(--image-size) - 300px);
+  height: calc(var(--image-size) - 360px);
+  width: calc(var(--image-size) - 360px);
+  position: absolute;
+  right: 202px;
+  bottom: 39px;
+  filter: saturate(0.4);
 }
 
 .logo-text {
@@ -83,7 +89,16 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+#logo-line1 {
+  color: var(--logo-color);
+  position: absolute;
+  font-size: 3rem;
+  right: 359px;
+  bottom: 42px;
+}
+
 #logo-line2 {
+  color: var(--logo-color);
   position: absolute;
   font-size: 4rem;
   right: 90px;
