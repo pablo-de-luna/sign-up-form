@@ -154,32 +154,55 @@ main {
 
 #welcome-msg {
   font-family: "fjalla-one", var(--font-stack);
+  font-size: 1.5rem;
 }
 
 form {
   font-family: var(--font-stack);
 }
 
-#name-input {
+#name-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-#name-input div {
+#name-container div {
   display: flex;
   flex-wrap: wrap;
-  flex: 1;
+  flex-grow: 1;
 }
 
-#name-input label {
-  width: 100%;
-}
-
-#name-input input {
+#name-container div input {
   width: 100%;
 } 
 
-button {
+div:has(input[type="email"]),
+div:has(input[type="tel"]) {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+}
+
+#password-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#password-container div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+input[type="password"] {
+  width: 100%;
+}
+
+button[type="submit"] {
   border: none;
   background-color: #01141f;
   color: white;
@@ -198,7 +221,7 @@ button {
   font-weight: bold;
 }
 
-/* 
+
 body * {
-  border: 1px dotted black;
-} */
+  border: 1px dotted grey;
+}
