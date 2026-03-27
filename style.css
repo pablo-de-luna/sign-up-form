@@ -85,7 +85,7 @@ main {
 
   background-color: #01141f;
   width: 100%;
-  height: 45vh;
+  height: 35vh;
   position: relative;
 }
 
@@ -146,19 +146,42 @@ main {
 }
 
 #form-side {
-  height: 100vh;
-  width: 100%;
   background-color: white;
   flex: 4;
+}
+
+#form-container {
+  max-width: 450px;
+  margin: 8vh 3vw;
 }
 
 #welcome-msg {
   font-family: "fjalla-one", var(--font-stack);
   font-size: 1.5rem;
+  color: #456476;
+  margin-left: 15px;
+}
+
+#welcome-msg div:last-child {
+  margin-top: 20px;
 }
 
 form {
   font-family: var(--font-stack);
+  font-size: 0.8rem;
+  color: #353535;
+  margin-top: 40px;
+}
+
+input {
+  appearance: none;
+  margin: 0 15px 20px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+label {
+  margin-left: 15px;
 }
 
 #name-container {
@@ -169,10 +192,10 @@ form {
 #name-container div {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
+  flex: 1 1 200px;
 }
 
-#name-container div input {
+input[type="text"] {
   width: 100%;
 } 
 
@@ -195,24 +218,35 @@ input[type="tel"] {
 #password-container div {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
+  flex: 1 1 200px;
 }
 
 input[type="password"] {
   width: 100%;
 }
 
+input {
+  appearance: none;
+  border: 1px solid #b7b9b9;
+}
+
 button[type="submit"] {
   border: none;
-  background-color: #01141f;
+  background-color: #667476;
   color: white;
-  padding: 15px 80px;
+  width: 280px;
+  height: 50px;
+  margin-top: 35px;
+  margin-left: 15px;
   appearance: none;
-  font-family: "fjalla-one", var(--font-stack);
+  font-family: var(--font-stack);
+  font-weight: bolder;
 }
 
 #login {
   font-family: var(--font-stack);
+  margin-left: 25px;
+  margin-top: 8px;
 }
 
 #login a {
@@ -221,7 +255,6 @@ button[type="submit"] {
   font-weight: bold;
 }
 
-
-body * {
+/* body * {
   border: 1px dotted grey;
-}
+} */
