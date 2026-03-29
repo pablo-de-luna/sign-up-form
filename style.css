@@ -151,6 +151,7 @@ main {
 #form-side {
   background-color: var(--background-color-secondary);
   flex: 4;
+  align-content: center;
 }
 
 #form-container {
@@ -247,15 +248,20 @@ input:focus {
 
 button[type="submit"] {
   border: none;
+  border-radius: 5px;
   background-color: var(--background-color-primary);
   color: white;
-  width: 280px;
+  width: 250px;
   height: 50px;
   margin-top: 35px;
   margin-left: 15px;
   appearance: none;
   font-family: var(--font-stack);
   font-weight: bolder;
+}
+
+button[type="submit"]:hover {
+  filter: brightness(1.5);
 }
 
 #login {
@@ -268,6 +274,10 @@ button[type="submit"] {
   color: inherit;
   text-decoration: none;
   font-weight: bold;
+}
+
+#login a:hover {
+  color: white;
 }
 
 /* body * {
