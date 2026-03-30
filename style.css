@@ -201,6 +201,7 @@ input {
   flex: 1;
   height: 30px;
   width: auto;
+  padding-left: 10px;
   outline: none;
   border: 1px solid #3a3a3a;
   background-color: #161513;
@@ -227,19 +228,21 @@ input:focus {
 }
 
 input:user-invalid {
-  border: 1px solid #b53030;
+  border: 1px solid #ff6f6f;
 }
 
 input + span {
-  border: 1px solid red;
   position: relative;
 }
 
-input + span::before {
-  content:"";
+input:user-invalid + span::before {
+  content:"invalid email address";
   position: absolute;
-  top: 0;
+  top: -22px;
   right: 0;
+  font-size: 0.7rem;
+  width: 300px;
+  color: #ff6f6f;
 }
 
 button[type="submit"] {
