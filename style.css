@@ -173,7 +173,7 @@ strong {
   margin-left: 15px;
 }
 
-#welcome-msg div:last-child {
+#welcome-msg span:last-child {
   margin-top: 20px;
 }
 
@@ -184,65 +184,38 @@ form {
   margin-top: 40px;
 }
 
-input {
-  appearance: none;
-  margin: 0 15px 20px;
-  height: 30px;
-  padding-left: 10px;
+div:has( > input) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  margin-right: 15px;
 }
 
 label {
-  margin-left: 15px;
+  width: 100%;
   margin-bottom: 5px;
 }
 
-#name-container {
-  display: flex;
-  flex-wrap: wrap;
+input {
+  appearance: none;
+  flex: 1;
+  height: 30px;
+  width: auto;
+  outline: none;
+  border: 1px solid #3a3a3a;
+  background-color: #161513;
+  color: var(--font-color-3);
 }
 
-#name-container div {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1 1 200px;
-}
-
-input[type="text"] {
-  width: 100%;
-} 
-
-div:has(input[type="email"]),
-div:has(input[type="tel"]) {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-input[type="email"],
-input[type="tel"] {
-  width: 100%;
-}
-
+#name-container,
 #password-container {
   display: flex;
   flex-wrap: wrap;
 }
 
+#name-container div,
 #password-container div {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1 1 200px;
-}
-
-input[type="password"] {
-  width: 100%;
-}
-
-input {
-  appearance: none;
-  outline: none;
-  border: 1px solid #3a3a3a;
-  background-color: #161513;
-  color: var(--font-color-3);
+  flex: 1 1 160px;
 }
 
 input:hover {
@@ -255,6 +228,18 @@ input:focus {
 
 input:user-invalid {
   border: 1px solid #b53030;
+}
+
+input + span {
+  border: 1px solid red;
+  position: relative;
+}
+
+input + span::before {
+  content:"";
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 button[type="submit"] {
