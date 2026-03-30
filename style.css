@@ -100,18 +100,18 @@ main {
   position: absolute;
   width: 340px;
   height: 320px;
-  right: 4vw;
+  right: 2vw;
   bottom: 0;
 }
 
 #logo-container img {
   --image-size: 512px;
 
-  height: calc(var(--image-size) - 360px);
-  width: calc(var(--image-size) - 360px);
+  height: calc(var(--image-size) - 400px);
+  width: calc(var(--image-size) - 400px);
   position: absolute;
-  right: 92px;
-  bottom: 39px;
+  right: 120px;
+  bottom: 36px;
   filter: saturate(2.5) hue-rotate(35deg) brightness(0.75); 
 }
 
@@ -122,17 +122,17 @@ main {
 #logo-line1 {
   color: var(--font-color-logo);
   position: absolute;
-  font-size: 3rem;
-  right: 249px;
-  bottom: 42px;
+  font-size:2.5rem;
+  right: 233px;
+  bottom: 36px;
 }
 
 #logo-line2 {
   color: var(--font-color-logo);
   position: absolute;
-  font-size: 4rem;
+  font-size: 3.5rem;
   right: 0;
-  bottom:  -25px;
+  bottom:  -21px;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -162,7 +162,7 @@ strong {
 }
 
 #form-container {
-  max-width: 450px;
+  max-width: 550px;
   margin: 8vh 3vw;
 }
 
@@ -170,10 +170,9 @@ strong {
   font-family: "fjalla-one", var(--font-stack);
   font-size: 1.5rem;
   color: var(--font-color-primary);
-  margin-left: 15px;
 }
 
-#welcome-msg span:last-child {
+#welcome-msg div:last-child {
   margin-top: 20px;
 }
 
@@ -216,7 +215,7 @@ input {
 
 #name-container div,
 #password-container div {
-  flex: 1 1 160px;
+  flex: 1 1 200px;
 }
 
 input:hover {
@@ -231,42 +230,67 @@ input:user-invalid {
   border: 1px solid #ff6f6f;
 }
 
+div:has(input:user-valid) > label::after {
+  content: " ✓";
+}
+
 input + span {
   position: relative;
 }
 
-input:user-invalid + span::before {
-  content:"invalid email address";
+span::before {
   position: absolute;
   top: -22px;
-  right: 0;
   font-size: 0.7rem;
   width: 300px;
   color: #ff6f6f;
 }
 
+input[type="text"]:user-invalid + span::before {
+  content:"Invalid name";
+  right: -230px;
+}
+
+input[type="email"]:user-invalid + span::before {
+  content:"Invalid email address";
+  right: -184px;
+}
+
+input[type="tel"]:user-invalid + span::before {
+  content:"Invalid format";
+  right: -224px;
+}
+
+input[type="password"]:user-invalid + span::before {
+  content:"Invalid password";
+  right: -207px;
+}
+
+#submit-container {
+  margin: 15px 15px 0 0;
+}
+
 button[type="submit"] {
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: var(--background-color-primary);
-  color: white;
-  width: 250px;
-  height: 50px;
-  margin-top: 35px;
-  margin-left: 15px;
+  color: #9bafc1;
+  width: 100%;
+  height:40px;
   appearance: none;
   font-family: var(--font-stack);
+  font-size: 1.1rem;
   font-weight: bolder;
 }
 
 button[type="submit"]:hover {
-  filter: brightness(1.5);
+  filter: brightness(1.3);
 }
 
 #login {
   font-family: var(--font-stack);
-  margin-left: 25px;
-  margin-top: 8px;
+  margin-top: 10px;
+  margin-left: 5px;
 }
 
 #login a {
