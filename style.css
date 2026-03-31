@@ -221,6 +221,14 @@ input {
   flex: 1 1 200px;
 }
 
+#password-container div {
+  margin-bottom: 5px;
+}
+
+#password-requirements {
+  margin-right: 15px;
+}
+
 input:hover {
   background-color: #25241f;
 }
